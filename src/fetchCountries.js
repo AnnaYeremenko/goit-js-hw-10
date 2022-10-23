@@ -1,8 +1,8 @@
-const base_url = 'https://restcountries.com/v3.1/name/';
+const baseUrl = 'https://restcountries.com/v3.1/name/';
 
 export const fetchCountries = name => {
   return fetch(
-    `${base_url}${name}?fields=name,capital,population,flags,languages`
+    `${baseUrl}${name}?fields=name,capital,population,flags,languages`
   ).then(response => {
     if (!response.ok) {
       throw new Error(response.status);
